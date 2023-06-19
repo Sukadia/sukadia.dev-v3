@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@500&display=swap');
+
+$primary-color: rgb(54, 224, 224);
+
+@mixin unpressed3d ($color: $primary-color, $color2: rgb(43, 46, 46), $x: 0, $y: 1, $darken: 1){
+  color: $primary-color;
+  transition-duration: 0.25s;
+  
+	text-shadow: 0px 0px 0 darken($color, 14%),
+        $x* 1px $y* 1px 0 darken($color2, $darken * 1),
+        $x* 2px $y* 2px 0 darken($color2, $darken * 2),
+        $x* 3px $y* 3px 0 darken($color2, $darken * 3),
+        $x* 4px $y* 4px 0 darken($color2, $darken * 4),
+        $x* 5px $y* 5px 0 darken($color2, $darken * 5),
+        $x* 6px $y* 6px 0 darken($color2, $darken * 6),
+        $x* 7px $y* 7px 0 darken($color2, $darken * 7),
+        $x* 8px $y* 8px 0 darken($color2, $darken * 8),
+        $x* 9px $y* 9px 8px rgba(0,0,0,0.55),
+        $x* 9px $y* 9px 1px rgba(0,0,0,0.5);
+  
+  &:hover {
+      top: -2px;
+      text-shadow: 0px 0px 0 darken($color, 14%),
+      $x* 1px $y* 1px 0 darken($color2, $darken * 1),
+      $x* 2px $y* 2px 0 darken($color2, $darken * 2),
+      $x* 3px $y* 3px 0 darken($color2, $darken * 3),
+      $x* 4px $y* 4px 0 darken($color2, $darken * 4),
+      $x* 5px $y* 5px 0 darken($color2, $darken * 5),
+      $x* 6px $y* 6px 0 darken($color2, $darken * 6),
+      $x* 7px $y* 7px 0 darken($color2, $darken * 7),
+      $x* 8px $y* 8px 0 darken($color2, $darken * 8),
+      $x* 9px $y* 9px 0 darken($color2, $darken * 9),
+      $x* 10px $y* 10px 0 darken($color2, $darken * 10),
+      $x* 11px $y* 11px 10px rgba(0,0,0,0.55),
+      $x* 11px $y* 11px 1px rgba(0,0,0,0.5);
+  }
+}
+
+.maintitle {
+  @include unpressed3d;
+
+  font-family: 'Geologica', Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+@mixin pressed3d ($color: $primary-color, $color2: rgb(43, 46, 46), $x: 0, $y: 1, $darken: 1){
+  color: $primary-color;
+  transition-duration: 0.25s;
+
+  transform: translateY(6px);
+  
+	text-shadow: 0px 0px 0 darken($color, 14%),
+        $x* 0px $y* 0px 8px rgba(0,0,0,0.55),
+        $x* 0px $y* 0px 1px rgba(0,0,0,0.5);
+  
+  &:hover {
+      transform: translateY(4px);
+      text-shadow: 0px 0px 0 darken($color, 14%),
+      $x* 1px $y* 1px 0 darken($color2, $darken * 1),
+      $x* 2px $y* 2px 0 darken($color2, $darken * 2),
+      $x* 3px $y* 3px 2px rgba(0,0,0,0.55),
+      $x* 3px $y* 3px 1px rgba(0,0,0,0.5);
+  }
+}
+
+.maintitle-pressed {
+  @include pressed3d;
+
+  font-family: 'Geologica', Helvetica, sans-serif;
+  font-weight: 500;
+}

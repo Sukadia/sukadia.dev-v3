@@ -1,112 +1,147 @@
+"use client"
 import Image from 'next/image'
+import { MouseEvent, useRef, useState } from 'react'
+
+import './style.scss'
+import Card from './Card'
+
+let dotHoldSound: ReturnType<typeof setTimeout>
 
 export default function Home() {
+  const [clickedOption, setOption] = useState("")
+  const sound = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined" ? new Audio("audio/the-fabled-period-button.mp3") : undefined
+  ).current
+
+  let sukadiaClick = (e: MouseEvent<HTMLDivElement>) => {
+    setOption(clickedOption == "sukadia" ? "" : "sukadia")
+  }
+
+  let dotclickcount = 0
+  let dotHoldSecret: ReturnType<typeof setTimeout>
+  let dotClick = (e: MouseEvent<HTMLDivElement>) => {
+    setOption(clickedOption == "." ? "" : ".")
+    dotclickcount++
+    let currentclick = dotclickcount
+    //TODO: Want it to be based off pushed-downness, if already pushed down it still needs to wait
+    dotHoldSound = setTimeout(() => {
+      if (dotclickcount == currentclick){
+        (sound?.cloneNode() as any).play()
+      }
+    }, 100)
+  }
+
+  let dotLeave = (e: MouseEvent<HTMLDivElement>) => {
+    //BUG: Stays held down since onMouseUp doesn't capture when it happens not over the element
+    setOption("")
+    clearTimeout(dotHoldSound)
+  }
+
+  let devClick = (e: MouseEvent<HTMLDivElement>) => {
+    setOption(clickedOption == "dev" ? "" : "dev")
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="select-none">
+      <div className='flex flex-col items-center h-screen overflow-hidden'>
+        <div className={
+        (clickedOption == "sukadia" || clickedOption == "dev" ? "-translate-y-24"
+        : "")
+        + " flex flex-row w-screen items-center justify-center overflow-hidden text-9xl m-auto transition-all duration-500 z-20"
+        }>
+          <div className="overflow-hidden flex-shrink" onMouseDown={sukadiaClick}>
+            <div id="sukadia" className={
+            (clickedOption == "sukadia" ? "maintitle-pressed top-2"
+            : "maintitle hover:-translate-y-0.5")
+            + ' transition-all hover:m-2 object-contain'}>
+              sukadia
+            </div>
+          </div>
+          <div className="overflow-hidden flex-shrink" onMouseDown={dotClick} onMouseUp={dotLeave}>
+            <div id="." className={
+            (clickedOption == "." ? "maintitle-pressed top-2"
+            : "maintitle hover:-translate-y-0.5")
+            + ' transition-all hover:m-2'}>
+              .
+            </div>
+          </div>
+          <div className="overflow-hidden flex-shrink" onMouseDown={devClick}>
+            <div id="dev" className={
+            (clickedOption == "dev" ? "maintitle-pressed top-2"
+            : "maintitle hover:-translate-y-0.5")
+            + ' transition-all hover:m-2'}>
+              dev
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={
+      (clickedOption == "sukadia" ? ""
+      : "pointer-events-none")
+      + " flex flex-col items-center h-screen fixed inset-x-0 top-1/2"
+      }>
+        <li className={
+        (clickedOption == "sukadia" ? "opacity-100 z-10"
+        : "opacity-0 pointer-events-none -translate-y-12 z-1")
+        + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500"
+        }>
+          <Card
+            title="Youtube"
+            description="Lots of VRChat videos focusing on roleplay."
+            icon="/images/YoutubeIcon.png"
+            link="/youtube"
+            shadow="shadow-red-950"
+          />
+          <Card
+            title="Twitch"
+            description="Occasional streams for whatever seems fun at the moment."
+            icon="/images/TwitchIcon.png"
+            link="/twitch"
+            shadow="shadow-violet-950"
+          />
+          <Card
+            title="Discord"
+            description="The hub for all my socials & projects. Join to stay updated!"
+            icon="/images/DiscordIcon.png"
+            link="/discord"
+            shadow="shadow-blue-900"
+          />
+        </li>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={
+      (clickedOption == "dev" ? ""
+      : "pointer-events-none")
+      + " flex flex-col items-center h-screen fixed inset-x-0 top-1/2"
+      }>
+        <li className={
+        (clickedOption == "dev" ? "opacity-100 z-10"
+        : "opacity-0 -translate-y-12 z-0")
+        + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500"
+        }>
+          <Card
+            title="Everyone-Votes"
+            description="A Discord bot that sends and tallies daily polls from thousands of servers."
+            icon="/images/EveryoneVotesIcon.png"
+            link="/everyone-votes"
+            shadow="shadow-blue-950"
+          />
+          <Card
+            title="Space"
+            description="A WebGPU space/nebula image generator with lots of parameters to modify."
+            icon="/images/SpaceIcon.png"
+            link="/space"
+            shadow="shadow-violet-950"
+          />
+          <Card
+            title="Dark"
+            description="A VSCode color theme based off of Brackets Dark."
+            icon="/images/DarkIcon.png"
+            link="/dark"
+            shadow="shadow-yellow-950"
+          />
+        </li>
       </div>
     </main>
   )
