@@ -1,5 +1,4 @@
 "use client"
-import Image from 'next/image'
 import { MouseEvent, useRef, useState } from 'react'
 
 import './style.scss'
@@ -125,7 +124,7 @@ export default function Home() {
             description="A Discord bot that sends and tallies daily polls from thousands of servers."
             icon="/images/EveryoneVotesIcon.png"
             link="/everyone-votes"
-            shadow="shadow-blue-950"
+            shadow="shadow-blue-900"
           />
           <Card
             title="Space"

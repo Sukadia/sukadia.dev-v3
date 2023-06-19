@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc --noemit",
+    "lint": "npm run typecheck && next lint"
   },
   "dependencies": {
     "@babylonjs/core": "^6.6.0",

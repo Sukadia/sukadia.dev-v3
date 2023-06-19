@@ -8,7 +8,7 @@ import ParameterPanel from "./ParameterPanel"
 
 const BabylonScene = dynamic(() => import(`./BabylonScene`), { ssr: false })
 
-export default function Sp(props: JSX.IntrinsicAttributes) {
+export default function Sp() {
   const [loaded, setLoaded] = useState(false)
 
   // Execute setLoaded(true) on the client side immediately after
@@ -35,7 +35,7 @@ export default function Sp(props: JSX.IntrinsicAttributes) {
   return (
     <main>
         <div id="TweakPane" className="fixed top-2.5 right-2.5"></div>
-        {loaded && <BabylonScene {...props} />}
+        {loaded && <BabylonScene/>}
         {!loaded && <Loading></Loading>}
     </main>
   )

@@ -1,3 +1,4 @@
+"use client"
 import { Pane } from "tweakpane"
 import BabylonInteractivity from "./BabylonInteractivity"
 
