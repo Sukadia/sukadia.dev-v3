@@ -1,23 +1,23 @@
 {
   "pages": {
     "/page": [
-      "static/chunks/webpack-b678c09626d03b10.js",
+      "static/chunks/webpack-6a2f9d00c0a0e8a5.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/css/81be724805f7170f.css",
-      "static/chunks/app/page-fa7a448c014265a8.js"
+      "static/css/968b5dc832f814f4.css",
+      "static/chunks/app/page-49a1395359d1729f.js"
     ],
     "/layout": [
-      "static/chunks/webpack-b678c09626d03b10.js",
+      "static/chunks/webpack-6a2f9d00c0a0e8a5.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/css/8e358767035b2aa7.css",
-      "static/chunks/app/layout-e37123422473c263.js"
+      "static/css/1933da0de40e05ad.css",
+      "static/chunks/app/layout-2f1b4d13066777b6.js"
     ],
     "/space/page": [
-      "static/chunks/webpack-b678c09626d03b10.js",
+      "static/chunks/webpack-6a2f9d00c0a0e8a5.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
@@ -30,11 +30,25 @@
       "static/chunks/app/space/page-36c0768bfc26ec40.js"
     ],
     "/space/loading": [
-      "static/chunks/webpack-b678c09626d03b10.js",
+      "static/chunks/webpack-6a2f9d00c0a0e8a5.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/chunks/app/space/loading-418fc1294566661c.js"
+      "static/chunks/app/space/loading-df1b886b524be596.js"
+    ],
+    "/everyone-votes/privacy/page": [
+      "static/chunks/webpack-6a2f9d00c0a0e8a5.js",
+      "static/chunks/2443530c-097fe1871e1d7679.js",
+      "static/chunks/488-66ca2c1db348e680.js",
+      "static/chunks/main-app-0be5dce44311dbbf.js",
+      "static/chunks/app/everyone-votes/privacy/page-4d788de82a96b899.js"
+    ],
+    "/everyone-votes/terms/page": [
+      "static/chunks/webpack-6a2f9d00c0a0e8a5.js",
+      "static/chunks/2443530c-097fe1871e1d7679.js",
+      "static/chunks/488-66ca2c1db348e680.js",
+      "static/chunks/main-app-0be5dce44311dbbf.js",
+      "static/chunks/app/everyone-votes/terms/page-5aa776690a4e5edf.js"
     ]
   }
 }
