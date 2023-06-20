@@ -1,26 +1,24 @@
 name: Deploy Next App
 on:
   push:
-    branches: [main]
+    branches: [live]
+  workflow_dispatch:
+
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    env:
-      SSH_KEY: ${{secrets.SSH_KEY}}
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm i
-      - run: mkdir ~/.ssh
-      - run: echo "$SSH_KEY" >> ~/.ssh/github-action
-      - run: chmod 400 ~/.ssh/github-action
-      - run: echo -e "Host vps\n\tUser sukadia\n\tHostname 162.248.100.45\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
-      - run: rsync -re ssh ./.next/ vps:/root/next-sukadia.dev/.next
-      - run: ssh vps "pm2 restart sukadia.dev"
+    - name: Pulling & Restarting
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_IP }}
+        username: ${{ secrets.REMOTE_USERNAME }}
+        password: ${{ secrets.REMOTE_PASSWORD }}
+        key: ${{ secrets.SSH_KEY }}
+        port: 22
+        script: |
+          cd next-sukadia.dev
+          git pull origin live
+          npm i
+          pm2 restart sukadia.dev
