@@ -335,14 +335,14 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 4225:
+/***/ 2286:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 125, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6249, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23))
 
 /***/ }),
 
@@ -374,7 +374,7 @@ var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 function Card(props) {
     //w-[20rem] h-[8rem] on 4k screen
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("a", {
-        className: `w-[20rem] h-[8rem] p-2 rounded-2xl bg-slate-800 shadow-lg shadow-slate-700 ${props.shadow} flex flex-col ease-out duration-300 hover:scale-105 hover:-translate-y-1 transition-all`,
+        className: `w-[20rem] h-[8rem] p-2 rounded-2xl bg-slate-800 shadow-lg ${props.shadow} flex flex-col ease-out duration-300 hover:scale-105 hover:-translate-y-1 transition-all`,
         href: props.link,
         target: "_blank",
         children: [
