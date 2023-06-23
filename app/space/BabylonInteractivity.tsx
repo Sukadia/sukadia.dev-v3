@@ -49,7 +49,7 @@ export default class BabylonInteractivity {
             this.resizeFrame(parameters.width,parameters.height)
         }
 
-        // Only rehash seed if necessary
+        // Rehash seed if necessary
         if (lastseed != parameters.seed){
             seednum = mulberry32(hashString(parameters.seed))
             lastseed = parameters.seed
@@ -57,10 +57,13 @@ export default class BabylonInteractivity {
         }
 
         // Apply new parameters
-        starshader.onApply = (effect) => {
-            effect.setFloat("seed", seednum+5)
-            effect.setFloat("density",parameters.density/100)
-            effect.setFloat("brightness",parameters.brightness/100)
+        if (parameters.density != 0 && parameters.brightness != 0){
+            camera.attachPostProcess(starshader)
+            starshader.onApply = (effect) => {
+                effect.setFloat("seed", seednum+5)
+                effect.setFloat("density",parameters.density/100)
+                effect.setFloat("brightness",parameters.brightness/100)
+            }
         }
 
         for (let i=0; i<nebulashaders.length; i++){
@@ -76,11 +79,9 @@ export default class BabylonInteractivity {
                 effect.setFloat("intensity",parameters.intensity/100-1)
                 effect.setFloat("falloff",parameters.falloff)
                 effect.setFloat("persistence",parameters.persistence)
-            }
-            //BUG: Renders are delayed by one render
-            nebulashaders[i].onApplyObservable.add((effect) => {
+                //BUG: Renders are delayed by one render
                 effect.setTextureSampler("textureSamplerSampler", nebulashaders[i].inputTexture.texture)
-            })
+            }
         }
 
         scene.onAfterRenderObservable.addOnce(() => {
@@ -118,10 +119,9 @@ export default class BabylonInteractivity {
 
         starshader = new PostProcess("StarShader","stars",null,null,1,camera,
             undefined,engine,true,undefined,undefined,undefined,undefined,undefined,undefined,ShaderLanguage.WGSL)
-        camera.attachPostProcess(starshader)
 
-        for (let i=0; i<10; i++){
-            nebulashaders.push(new PostProcess("NebulaShader","nebulas",null,null,1,camera,
+        for (let i=0; i<2; i++){
+            nebulashaders.push(new PostProcess("NebulaShader"+i,"nebulas",null,null,1,camera,
                 undefined,engine,true,undefined,undefined,undefined,undefined,undefined,undefined,ShaderLanguage.WGSL))
         }
     }
