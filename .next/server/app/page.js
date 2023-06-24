@@ -335,17 +335,6 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 5044:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 125, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6249, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23))
-
-/***/ }),
-
 /***/ 5157:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -374,7 +363,7 @@ var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 function Card(props) {
     //w-[20rem] h-[8rem] on 4k screen
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("a", {
-        className: `w-[20rem] h-[8rem] p-2 rounded-2xl bg-slate-800 shadow-lg ${props.shadow} flex flex-col ease-out duration-300 hover:scale-105 hover:-translate-y-1 transition-all`,
+        className: `w-[20rem] h-[8rem] p-2 rounded-2xl bg-slate-800 shadow-lg ${props.shadow} flex flex-col flex-shrink-0 ease-out duration-300 hover:scale-105 hover:-translate-y-1 transition-all`,
         href: props.link,
         target: "_blank",
         children: [
@@ -494,7 +483,7 @@ function Home() {
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (clickedOption == "sukadia" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto",
+                className: (clickedOption == "sukadia" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-y-auto overflow-x-hidden",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
                     className: (clickedOption == "sukadia" ? "opacity-100 z-10" : "opacity-0 pointer-events-none -translate-y-12 z-1") + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500",
                     children: [
@@ -523,7 +512,7 @@ function Home() {
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (clickedOption == "dev" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto",
+                className: (clickedOption == "dev" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-y-auto overflow-x-hidden",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
                     className: (clickedOption == "dev" ? "opacity-100 z-10" : "opacity-0 -translate-y-12 z-0") + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500",
                     children: [
@@ -598,7 +587,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [405,616,421,778], () => (__webpack_exec__(4394)));
+var __webpack_exports__ = __webpack_require__.X(0, [405,616,421,816], () => (__webpack_exec__(4394)));
 module.exports = __webpack_exports__;
 
 })();

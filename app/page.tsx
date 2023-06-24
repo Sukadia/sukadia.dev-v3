@@ -80,7 +80,7 @@ export default function Home() {
       <div className={
       (clickedOption == "sukadia" ? ""
       : "pointer-events-none")
-      + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto"
+      + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-y-auto overflow-x-hidden"
       }>
         <li className={
         (clickedOption == "sukadia" ? "opacity-100 z-10"
@@ -114,7 +114,7 @@ export default function Home() {
       <div className={
       (clickedOption == "dev" ? ""
       : "pointer-events-none")
-      + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto"
+      + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-y-auto overflow-x-hidden"
       }>
         <li className={
         (clickedOption == "dev" ? "opacity-100 z-10"

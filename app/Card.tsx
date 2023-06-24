@@ -16,7 +16,7 @@ export default function Card( props: CardProps ) {
 
   //w-[20rem] h-[8rem] on 4k screen
   return (
-    <a className={`w-[20rem] h-[8rem] p-2 rounded-2xl bg-slate-800 shadow-lg ${props.shadow} flex flex-col ease-out duration-300 hover:scale-105 hover:-translate-y-1 transition-all`}
+    <a className={`w-[20rem] h-[8rem] p-2 rounded-2xl bg-slate-800 shadow-lg ${props.shadow} flex flex-col flex-shrink-0 ease-out duration-300 hover:scale-105 hover:-translate-y-1 transition-all`}
     href={props.link} target="_blank">
       <div className="flex flex-row items-center gap-1 ml-2 h-[2rem] w-full rounded-2xl">
         <span className="text-l font-bold text-cyan-500">
