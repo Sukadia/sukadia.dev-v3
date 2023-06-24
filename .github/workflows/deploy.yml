@@ -17,8 +17,11 @@ jobs:
         password: ${{ secrets.REMOTE_PASSWORD }}
         key: ${{ secrets.SSH_KEY }}
         port: 22
+        script_stop: true
         script: |
           cd next-sukadia.dev
+          git stash
+          git stash drop || true
           git pull origin live
           npm i
           pm2 restart sukadia.dev

@@ -1,6 +1,6 @@
 {
-  "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
   "/space/page": "/space",
   "/everyone-votes/privacy/page": "/everyone-votes/privacy",
   "/everyone-votes/terms/page": "/everyone-votes/terms"
