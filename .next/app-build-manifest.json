@@ -1,23 +1,23 @@
 {
   "pages": {
     "/page": [
-      "static/chunks/webpack-00a8cabbcd28b54d.js",
+      "static/chunks/webpack-2bbde3eab61f1345.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/css/12001480c7eba77a.css",
-      "static/chunks/app/page-5e99dca42385242a.js"
+      "static/css/00f482ac91b6ff2b.css",
+      "static/chunks/app/page-08a9f267afe95e23.js"
     ],
     "/layout": [
-      "static/chunks/webpack-00a8cabbcd28b54d.js",
+      "static/chunks/webpack-2bbde3eab61f1345.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/css/1221c2d3dbb240af.css",
-      "static/chunks/app/layout-110e60ba26b86961.js"
+      "static/css/2a82df75ba2423c6.css",
+      "static/chunks/app/layout-5b2c69718b4e89e2.js"
     ],
     "/space/page": [
-      "static/chunks/webpack-00a8cabbcd28b54d.js",
+      "static/chunks/webpack-2bbde3eab61f1345.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
@@ -30,21 +30,21 @@
       "static/chunks/app/space/page-36c0768bfc26ec40.js"
     ],
     "/space/loading": [
-      "static/chunks/webpack-00a8cabbcd28b54d.js",
+      "static/chunks/webpack-2bbde3eab61f1345.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
       "static/chunks/app/space/loading-df1b886b524be596.js"
     ],
     "/everyone-votes/privacy/page": [
-      "static/chunks/webpack-00a8cabbcd28b54d.js",
+      "static/chunks/webpack-2bbde3eab61f1345.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
       "static/chunks/app/everyone-votes/privacy/page-4d788de82a96b899.js"
     ],
     "/everyone-votes/terms/page": [
-      "static/chunks/webpack-00a8cabbcd28b54d.js",
+      "static/chunks/webpack-2bbde3eab61f1345.js",
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",

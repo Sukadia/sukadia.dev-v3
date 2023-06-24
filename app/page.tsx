@@ -46,13 +46,13 @@ export default function Home() {
         <div className={
         (clickedOption == "sukadia" || clickedOption == "dev" ? "-translate-y-24"
         : "")
-        + " flex flex-row w-screen items-center justify-center overflow-hidden text-9xl m-auto transition-all duration-500 z-20"
+        + " flex flex-row w-screen items-center justify-center overflow-hidden text-6xl min-[437px]:text-7xl min-[577px]:text-8xl md:text-9xl m-auto transition-all duration-500 z-20"
         }>
           <div className="overflow-hidden flex-shrink" onMouseDown={sukadiaClick}>
             <div id="sukadia" className={
             (clickedOption == "sukadia" ? "maintitle-pressed top-2"
             : "maintitle hover:-translate-y-0.5")
-            + ' transition-all hover:m-2 object-contain'}>
+            + ' transition-all hover:m-2'}>
               sukadia
             </div>
           </div>
@@ -75,10 +75,12 @@ export default function Home() {
         </div>
       </div>
 
+      {/* //TODO: Text on mobile is scaled up overall, too big for cards */}
+
       <div className={
       (clickedOption == "sukadia" ? ""
       : "pointer-events-none")
-      + " flex flex-col items-center h-screen fixed inset-x-0 top-1/2"
+      + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto"
       }>
         <li className={
         (clickedOption == "sukadia" ? "opacity-100 z-10"
@@ -112,7 +114,7 @@ export default function Home() {
       <div className={
       (clickedOption == "dev" ? ""
       : "pointer-events-none")
-      + " flex flex-col items-center h-screen fixed inset-x-0 top-1/2"
+      + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto"
       }>
         <li className={
         (clickedOption == "dev" ? "opacity-100 z-10"

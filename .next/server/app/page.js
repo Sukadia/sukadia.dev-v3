@@ -335,14 +335,14 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 2286:
+/***/ 5044:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 125, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6249, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23))
 
 /***/ }),
 
@@ -460,14 +460,14 @@ function Home() {
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "flex flex-col items-center h-screen overflow-hidden",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: (clickedOption == "sukadia" || clickedOption == "dev" ? "-translate-y-24" : "") + " flex flex-row w-screen items-center justify-center overflow-hidden text-9xl m-auto transition-all duration-500 z-20",
+                    className: (clickedOption == "sukadia" || clickedOption == "dev" ? "-translate-y-24" : "") + " flex flex-row w-screen items-center justify-center overflow-hidden text-6xl min-[437px]:text-7xl min-[577px]:text-8xl md:text-9xl m-auto transition-all duration-500 z-20",
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: "overflow-hidden flex-shrink",
                             onMouseDown: sukadiaClick,
                             children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                                 id: "sukadia",
-                                className: (clickedOption == "sukadia" ? "maintitle-pressed top-2" : "maintitle hover:-translate-y-0.5") + " transition-all hover:m-2 object-contain",
+                                className: (clickedOption == "sukadia" ? "maintitle-pressed top-2" : "maintitle hover:-translate-y-0.5") + " transition-all hover:m-2",
                                 children: "sukadia"
                             })
                         }),
@@ -494,7 +494,7 @@ function Home() {
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (clickedOption == "sukadia" ? "" : "pointer-events-none") + " flex flex-col items-center h-screen fixed inset-x-0 top-1/2",
+                className: (clickedOption == "sukadia" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
                     className: (clickedOption == "sukadia" ? "opacity-100 z-10" : "opacity-0 pointer-events-none -translate-y-12 z-1") + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500",
                     children: [
@@ -523,7 +523,7 @@ function Home() {
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (clickedOption == "dev" ? "" : "pointer-events-none") + " flex flex-col items-center h-screen fixed inset-x-0 top-1/2",
+                className: (clickedOption == "dev" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-auto",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
                     className: (clickedOption == "dev" ? "opacity-100 z-10" : "opacity-0 -translate-y-12 z-0") + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500",
                     children: [
