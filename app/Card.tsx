@@ -27,12 +27,13 @@ export default function Card( props: CardProps ) {
         </span>
       </div>
 
-      <div className="flex flex-row h-full w-full overflow-clip">
+      <div className="flex flex-row w-full overflow-clip h-[84px]">
         <div className="h-full aspect-square rounded-2xl relative">
           <div className="h-full w-full aspect-square relative rounded-2xl overflow-hidden">
             <Image
               fill={true}
               src={props.icon}
+              sizes="128px"
               alt="thumbnail"
               className=""
             />

@@ -335,6 +335,17 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
+/***/ 229:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 125, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6249, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23))
+
+/***/ }),
+
 /***/ 5157:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -384,7 +395,7 @@ function Card(props) {
                 ]
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: "flex flex-row h-full w-full overflow-clip",
+                className: "flex flex-row w-full overflow-clip h-[84px]",
                 children: [
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
                         className: "h-full aspect-square rounded-2xl relative",
@@ -393,6 +404,7 @@ function Card(props) {
                             children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                 fill: true,
                                 src: props.icon,
+                                sizes: "128px",
                                 alt: "thumbnail",
                                 className: ""
                             })
@@ -587,7 +599,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [405,616,421,816], () => (__webpack_exec__(4394)));
+var __webpack_exports__ = __webpack_require__.X(0, [405,616,421,778], () => (__webpack_exec__(4394)));
 module.exports = __webpack_exports__;
 
 })();

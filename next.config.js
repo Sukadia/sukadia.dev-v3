@@ -9,6 +9,11 @@ module.exports = {
                 permanent: false,
             },
             {
+                source: "/:slug(dev|vod|vods)",
+                destination: "https://www.youtube.com/channel/UC8S8l4sY8YsVcngSBTVyoSA",
+                permanent: false,
+            },
+            {
                 source: "/:slug(ttv|twitch)",
                 destination: "https://www.twitch.tv/Sukadia",
                 permanent: false,

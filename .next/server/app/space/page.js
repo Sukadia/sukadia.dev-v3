@@ -272,6 +272,17 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
+/***/ 7023:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 125, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6249, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23))
+
+/***/ }),
+
 /***/ 3259:
 /***/ (() => {
 
@@ -314,8 +325,8 @@ function Loading() {
 
 // EXTERNAL MODULE: ./node_modules/tweakpane/dist/tweakpane.js
 var tweakpane = __webpack_require__(1853);
-// EXTERNAL MODULE: ./node_modules/@babylonjs/core/index.js + 1171 modules
-var core = __webpack_require__(2976);
+// EXTERNAL MODULE: ./node_modules/@babylonjs/core/index.js + 1254 modules
+var core = __webpack_require__(6803);
 ;// CONCATENATED MODULE: ./app/space/BabylonInteractivity.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
@@ -714,7 +725,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [405,616,359,816], () => (__webpack_exec__(3014)));
+var __webpack_exports__ = __webpack_require__.X(0, [405,616,864,778], () => (__webpack_exec__(3014)));
 module.exports = __webpack_exports__;
 
 })();
