@@ -335,17 +335,6 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 229:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 125, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 7844, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 6249, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 1522, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3100, 23))
-
-/***/ }),
-
 /***/ 5157:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -497,7 +486,7 @@ function Home() {
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: (clickedOption == "sukadia" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-y-auto overflow-x-hidden",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
-                    className: (clickedOption == "sukadia" ? "opacity-100 z-10" : "opacity-0 pointer-events-none -translate-y-12 z-1") + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500",
+                    className: (clickedOption == "sukadia" ? "opacity-100 z-10" : "opacity-0 pointer-events-none -translate-y-12 z-1") + " flex flex-wrap flex-row items-center justify-center w-3/5 max-w-[1200px] gap-8 transition-all duration-500",
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx(Card, {
                             title: "Youtube",
@@ -519,6 +508,13 @@ function Home() {
                             icon: "/images/DiscordIcon.png",
                             link: "/discord",
                             shadow: "shadow-blue-900"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(Card, {
+                            title: "Ko-fi",
+                            description: "Support me monthly to help me make more content.",
+                            icon: "/images/KofiIcon.png",
+                            link: "/ko-fi",
+                            shadow: "shadow-sky-900"
                         })
                     ]
                 })
@@ -526,7 +522,7 @@ function Home() {
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: (clickedOption == "dev" ? "" : "pointer-events-none") + " flex flex-col items-center absolute h-1/2 p-4 mt-4 -translate-y-4 inset-x-0 top-1/2 overflow-y-auto overflow-x-hidden",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
-                    className: (clickedOption == "dev" ? "opacity-100 z-10" : "opacity-0 -translate-y-12 z-0") + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500",
+                    className: (clickedOption == "dev" ? "opacity-100 z-10" : "opacity-0 -translate-y-12 z-0") + " flex flex-wrap flex-row items-center justify-center w-3/5 max-w-[1200px] gap-8 transition-all duration-500",
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx(Card, {
                             title: "Everyone-Votes",
@@ -599,7 +595,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [405,616,421,778], () => (__webpack_exec__(4394)));
+var __webpack_exports__ = __webpack_require__.X(0, [405,616,421,816], () => (__webpack_exec__(4394)));
 module.exports = __webpack_exports__;
 
 })();

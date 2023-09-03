@@ -85,7 +85,7 @@ export default function Home() {
         <li className={
         (clickedOption == "sukadia" ? "opacity-100 z-10"
         : "opacity-0 pointer-events-none -translate-y-12 z-1")
-        + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500"
+        + " flex flex-wrap flex-row items-center justify-center w-3/5 max-w-[1200px] gap-8 transition-all duration-500"
         }>
           <Card
             title="Youtube"
@@ -108,6 +108,13 @@ export default function Home() {
             link="/discord"
             shadow="shadow-blue-900"
           />
+          <Card
+            title="Ko-fi"
+            description="Support me monthly to help me make more content."
+            icon="/images/KofiIcon.png"
+            link="/ko-fi"
+            shadow="shadow-sky-900"
+          />
         </li>
       </div>
 
@@ -119,7 +126,7 @@ export default function Home() {
         <li className={
         (clickedOption == "dev" ? "opacity-100 z-10"
         : "opacity-0 -translate-y-12 z-0")
-        + " flex flex-wrap flex-row items-center justify-center w-3/5 gap-8 transition-all duration-500"
+        + " flex flex-wrap flex-row items-center justify-center w-3/5 max-w-[1200px] gap-8 transition-all duration-500"
         }>
           <Card
             title="Everyone-Votes"
