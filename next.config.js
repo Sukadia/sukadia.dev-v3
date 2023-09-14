@@ -20,7 +20,7 @@ module.exports = {
             },
             {
                 source: "/:slug(hub|discord)",
-                destination: "https://discord.gg/Ztn297DXdw",
+                destination: "https://discord.gg/ReSCjYpXnK",
                 permanent: false,
             },
             {

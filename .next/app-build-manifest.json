@@ -34,14 +34,7 @@
       "static/chunks/2443530c-097fe1871e1d7679.js",
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/chunks/app/space/loading-df1b886b524be596.js"
-    ],
-    "/everyone-votes/privacy/page": [
-      "static/chunks/webpack-ff9288af74fc19c3.js",
-      "static/chunks/2443530c-097fe1871e1d7679.js",
-      "static/chunks/488-66ca2c1db348e680.js",
-      "static/chunks/main-app-0be5dce44311dbbf.js",
-      "static/chunks/app/everyone-votes/privacy/page-4d788de82a96b899.js"
+      "static/chunks/app/space/loading-fdff1d2fb4c15223.js"
     ],
     "/everyone-votes/terms/page": [
       "static/chunks/webpack-ff9288af74fc19c3.js",
@@ -49,6 +42,13 @@
       "static/chunks/488-66ca2c1db348e680.js",
       "static/chunks/main-app-0be5dce44311dbbf.js",
       "static/chunks/app/everyone-votes/terms/page-5aa776690a4e5edf.js"
+    ],
+    "/everyone-votes/privacy/page": [
+      "static/chunks/webpack-ff9288af74fc19c3.js",
+      "static/chunks/2443530c-097fe1871e1d7679.js",
+      "static/chunks/488-66ca2c1db348e680.js",
+      "static/chunks/main-app-0be5dce44311dbbf.js",
+      "static/chunks/app/everyone-votes/privacy/page-4d788de82a96b899.js"
     ]
   }
 }
