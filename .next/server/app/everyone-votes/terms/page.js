@@ -314,7 +314,7 @@ function Terms() {
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                        children: "- Malicious use of interactions is not allowed."
+                        children: "- Spamming bot interactions is not allowed."
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                         children: "- Only one account per person may vote on polls."
@@ -324,14 +324,16 @@ function Terms() {
                             "- Follow ",
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
                                 href: "https://discord.com/terms",
+                                className: "text-blue-500",
                                 children: "Discord's Terms of Service"
-                            })
+                            }),
+                            "."
                         ]
                     })
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                children: "Failure to follow these terms may result in the user being blacklisted from using Everyone Vote's features, at the discretion of the developer."
+                children: "Failure to follow these terms may result in the user being blacklisted from using Everyone Vote's features, either automatically or at the discretion of the developer."
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
@@ -340,24 +342,26 @@ function Terms() {
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                 children: [
-                    "Everyone Votes offers certain features that require supporting the developer monthly on ",
+                    "Everyone Votes offers certain features that require supporting the bot monthly on ",
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                        href: "https://ko-fi.com/sukadia/tiers",
+                        href: "https://ko-fi.com/everyonevotes/tiers",
+                        className: "text-blue-500",
                         children: "Ko-fi"
                     }),
                     ". In order to gain access to these features, the supporter must be in the Discord ",
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
                         href: "https://discord.gg/pc6EcNjuZU",
+                        className: "text-blue-500",
                         children: "support server"
                     }),
                     " to properly track subscription status."
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                children: "Benefits may not immediately appear for the supporter, and may not work fully as expected. Please follow the contact information below to report any of these issues so they may be resolved in a timely fashion."
+                children: "Benefits may not immediately appear for the supporter, and may not work fully as expected. Please follow the contact information below to report any issues so they may be resolved in a timely fashion."
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                children: "Refunds are not guaranteed and will be given at the discretion of the developer. I'm a pretty reasonable person though, just have a valid reason!"
+                children: "Refunds are not guaranteed and will be given at the discretion of the developer. (I'm a pretty reasonable person though!)"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
@@ -369,6 +373,7 @@ function Terms() {
                     "If you have questions or concerns about these terms, please join the ",
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
                         href: "https://discord.gg/pc6EcNjuZU",
+                        className: "text-blue-500",
                         children: "support server"
                     }),
                     " on Discord, or email ",
@@ -380,7 +385,7 @@ function Terms() {
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                children: "I appreciate you for reading these termss, not many do that!"
+                children: "I appreciate you for reading these terms, not many do that!"
             })
         ]
     });
