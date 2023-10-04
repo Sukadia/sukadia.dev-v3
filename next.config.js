@@ -9,8 +9,13 @@ module.exports = {
                 permanent: false,
             },
             {
-                source: "/:slug(dev|vod|vods)",
+                source: "/:slug(vod|vods)",
                 destination: "https://www.youtube.com/channel/UC8S8l4sY8YsVcngSBTVyoSA",
+                permanent: false,
+            },
+            {
+                source: "/:slug(dev|update|updates)",
+                destination: "https://www.youtube.com/channel/UCbzmy3xP2E0rLhCPFktbwAQ",
                 permanent: false,
             },
             {

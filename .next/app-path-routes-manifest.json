@@ -3,6 +3,6 @@
   "/page": "/",
   "/wiston/page": "/wiston",
   "/space/page": "/space",
-  "/everyone-votes/terms/page": "/everyone-votes/terms",
-  "/everyone-votes/privacy/page": "/everyone-votes/privacy"
+  "/everyone-votes/privacy/page": "/everyone-votes/privacy",
+  "/everyone-votes/terms/page": "/everyone-votes/terms"
 }

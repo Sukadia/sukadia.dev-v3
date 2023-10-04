@@ -3,6 +3,6 @@
   "/page": "app/page.js",
   "/wiston/page": "app/wiston/page.js",
   "/space/page": "app/space/page.js",
-  "/everyone-votes/terms/page": "app/everyone-votes/terms/page.js",
-  "/everyone-votes/privacy/page": "app/everyone-votes/privacy/page.js"
+  "/everyone-votes/privacy/page": "app/everyone-votes/privacy/page.js",
+  "/everyone-votes/terms/page": "app/everyone-votes/terms/page.js"
 }
