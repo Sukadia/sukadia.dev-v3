@@ -1,8 +1,8 @@
 {
   "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
-  "/space/page": "/space",
   "/wiston/page": "/wiston",
+  "/space/page": "/space",
   "/everyone-votes/terms/page": "/everyone-votes/terms",
   "/everyone-votes/privacy/page": "/everyone-votes/privacy"
 }
