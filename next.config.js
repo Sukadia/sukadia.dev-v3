@@ -39,6 +39,11 @@ module.exports = {
                 permanent: false,
             },
             {
+                source: "/poster",
+                destination: "https://ko-fi.com/s/3cf296742e",
+                permanent: false,
+            },
+            {
                 source: "/dark",
                 destination: "https://marketplace.visualstudio.com/items?itemName=Sukadia.sukadia-dev-dark",
                 permanent: false,

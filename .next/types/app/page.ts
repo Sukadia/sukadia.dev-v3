@@ -1,6 +1,6 @@
 // File: X:\Some Useful Stuff\Applications\Web\next-sukadia.dev\app\page.tsx
 import * as entry from '../../../app/page.js'
-import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
+import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
 type TEntry = typeof import('../../../app/page.js')
 
@@ -15,9 +15,12 @@ checkFields<Diff<{
   fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
   preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
   runtime?: 'nodejs' | 'experimental-edge' | 'edge'
+  maxDuration?: number
   
   metadata?: any
   generateMetadata?: Function
+  viewport?: any
+  generateViewport?: Function
   
 }, TEntry, ''>>()
 
@@ -28,6 +31,12 @@ checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
 if ('generateMetadata' in entry) {
   checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
   checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
+}
+
+// Check the arguments and return type of the generateViewport function
+if ('generateViewport' in entry) {
+  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
+  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
 }
 
 // Check the arguments and return type of the generateStaticParams function

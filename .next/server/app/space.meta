@@ -1,1 +1,5 @@
-{"headers":{"x-next-cache-tags":"/space/page"}}
+{
+  "headers": {
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/space/layout,_N_T_/space/page,_N_T_/space"
+  }
+}
