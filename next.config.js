@@ -44,6 +44,11 @@ module.exports = {
                 permanent: false,
             },
             {
+                source: "/playlist",
+                destination: "https://github.com/Sukadia/Slash-Playlist",
+                permanent: false,
+            },
+            {
                 source: "/dark",
                 destination: "https://marketplace.visualstudio.com/items?itemName=Sukadia.sukadia-dev-dark",
                 permanent: false,
