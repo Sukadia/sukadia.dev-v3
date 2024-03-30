@@ -2,8 +2,8 @@
   "/_not-found": "app/_not-found.js",
   "/everyone-votes/privacy/page": "app/everyone-votes/privacy/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/space/page": "app/space/page.js",
   "/everyone-votes/terms/page": "app/everyone-votes/terms/page.js",
   "/page": "app/page.js",
+  "/space/page": "app/space/page.js",
   "/wiston/page": "app/wiston/page.js"
 }
