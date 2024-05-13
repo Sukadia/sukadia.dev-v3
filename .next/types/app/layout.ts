@@ -1,4 +1,4 @@
-// File: X:\Some Useful Stuff\Applications\Web\next-sukadia.dev\app\layout.tsx
+// File: X:\Some Useful Stuff\Applications\Web\sukadia.dev-v3\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

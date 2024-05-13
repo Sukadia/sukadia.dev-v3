@@ -1,4 +1,4 @@
-// File: X:\Some Useful Stuff\Applications\Web\next-sukadia.dev\app\everyone-votes\terms\page.tsx
+// File: X:\Some Useful Stuff\Applications\Web\sukadia.dev-v3\app\everyone-votes\terms\page.tsx
 import * as entry from '../../../../../app/everyone-votes/terms/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
