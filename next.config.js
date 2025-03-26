@@ -44,6 +44,11 @@ module.exports = {
                 permanent: false,
             },
             {
+                source: "/shirt",
+                destination: "https://www.etsy.com/listing/1893284693/the-black-cat-corporation-t-shirt",
+                permanent: false,
+            },
+            {
                 source: "/playlist",
                 destination: "https://github.com/Sukadia/Slash-Playlist",
                 permanent: false,
